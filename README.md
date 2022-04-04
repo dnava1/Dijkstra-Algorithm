@@ -14,7 +14,7 @@ By using an adjacency matrix such as: <br>
 0 3 => source and target <br>
 
 We can draw a graph with 7 vertices and draw the shortest path between vertex 0 and vertex 3. <br>
-Below is an example graph using the same vertex from above, the shortest path in green: <br>
+Below is an example graph using the same adjacency matrix, the shortest path in green: <br>
 
 
 <img src="https://user-images.githubusercontent.com/90110498/161473962-22899cda-6bfc-4e0d-861e-849360b9c88c.JPG" width="425" height="425"> <br>
