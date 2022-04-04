@@ -61,8 +61,8 @@ public class Graph implements GraphInterface {
      * Finds vertices adjacent to a given vertex.
      *
      * @param v given vertex
-     * @return list of vertices adjacent to v stored in an array;
-     *         size of array = number of adjacent vertices
+     * @return list of vertices adjacent to v;
+     * 
      */
     public int[] findAdjacencyVertices(int v) {
         int[] vert = new int[verticesNumber];

@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class SourceAssignment2{
+public class DijkstraAlgorithm{
     public static void main(String[]  args) 
     {
         Graph g = new Graph("graph.txt");
