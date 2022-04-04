@@ -16,7 +16,8 @@ public class GraphDisplay extends JPanel {
      * @param g graphics context
      */
     public void paint(Graphics g) {
-
+        
+        //math variables to draw circle
         int x = getWidth() / 2;
         int y = getHeight() / 2;
         int r = 4 * 400 / 5;
@@ -31,16 +32,10 @@ public class GraphDisplay extends JPanel {
         // Saves vertex position
         int[] xSave = new int[graph.VerticesNumber()];
         int[] ySave = new int[graph.VerticesNumber()];
-
-        g.setColor(Color.black);
-        g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 20));
-        g.drawString("Source: " + graph.Source(), 10, 20);
-        g.drawString("Target: " + graph.Target(), 10, 40);
-
+        
         int[] p = new int[graph.VerticesNumber()];
         int[] d = new int[graph.VerticesNumber()];
 
-        
         graph.allShortestPaths(p, d, graph.Source());
 
         // current vertex
@@ -57,8 +52,11 @@ public class GraphDisplay extends JPanel {
         // fixes order
         Collections.reverse(path);
 
+        //drawing out information strings
         g.setColor(Color.black);
         g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 20));
+        g.drawString("Source: " + graph.Source(), 10, 20);
+        g.drawString("Target: " + graph.Target(), 10, 40);
         g.drawString("Shortest path in blue: " + path,10, 60);
         g.drawString("Total distance: " + d[graph.Target()],10, 80);
 
@@ -73,6 +71,7 @@ public class GraphDisplay extends JPanel {
             ySave[i] = b;
 
         }
+        //setting line thickness
         g2.setStroke(new BasicStroke(5));
 
         // Draws the edges
